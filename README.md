@@ -1,2 +1,2 @@
-# FZ
-Flipper Zero stuff
+# FZ BadUSB scripts
+Flipper Zero BadUSB scripts
